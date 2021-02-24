@@ -3,7 +3,7 @@ class CreatePublishers < ActiveRecord::Migration[6.0]
     create_table :publishers do |t|
       t.string :name
       t.string :description
-      t.integer :deleted
+      t.integer :deleted, default: 0
 
       t.timestamps
     end

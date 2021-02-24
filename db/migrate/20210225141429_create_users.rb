@@ -9,8 +9,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone
       t.string :id_card
       t.string :remember_digest
-      t.integer :deleted
-      t.integer :role
+      t.integer :deleted, default: 0
+      t.integer :role, default: 0
 
       t.timestamps
     end

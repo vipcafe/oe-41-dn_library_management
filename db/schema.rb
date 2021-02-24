@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
   create_table "book_interactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.boolean "like", default: false
     t.boolean "follow", default: false
-    t.integer "rating"
+    t.integer "rating", default: 0
     t.string "comment"
     t.integer "deleted", default: 0
     t.bigint "user_id", null: false
@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.string "id_card"
     t.string "remember_digest"
     t.integer "deleted", default: 0
-    t.integer "role"
+    t.integer "role", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
