@@ -25,6 +25,7 @@ config/master.key
 config/database.yml
 
 config/credentials.yml.enc
+test/
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
@@ -85,6 +86,7 @@ yarn-debug.log*
 /node_modules
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
+config/database.yml
 db/development.sqlite3
 .idea/*
 config/application.yml
