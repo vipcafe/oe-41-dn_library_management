@@ -1,0 +1,19 @@
+<div class="col-sm-3" >
+  <div class="product-card">
+    <div class="badge"><%= t(".new") %></div>
+    <div class="product-tumb">
+      <img src="https://www.dtv-ebook.com/images/files_2/2020/ban-that-ba-dao!-jen-sincero.jpg" alt="">
+    </div>
+    <div class="product-details">
+      <span class="product-catagory"><%= book.author_name %> | <%= book.category_name %></span>
+      <h5><a href=""><%= book.title %></a></h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+      <div class="product-bottom-details row">
+        <button type="button" class="btn btn-primary"
+        style="width: 100% ; margin-bottom: 5px"><%= t(".borrow") %></button>
+        <button type="button" class="btn btn-info"
+        style="width: 100%"><%= t(".details") %></button>
+      </div>
+    </div>
+  </div>
+</div>

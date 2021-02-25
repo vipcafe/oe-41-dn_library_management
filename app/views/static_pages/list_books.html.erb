@@ -1,0 +1,31 @@
+<div class="container-fuild list-book" >
+  <div class = "row box-book">
+    <div class="col-lg-2 col-md-2 menu-book">
+      <div class="btn btn-primary task" > All book</div>
+      <div class="btn btn-primary task" > Truyện tranh</div>
+      <div class="btn btn-primary task" > Truyện chữ </div>
+      <div class="btn btn-primary task" > Sách thiếu nhi </div>
+    </div>
+    <div class="col-lg-10 col-md-10 show-book">
+      <%= form_tag(static_pages_list_books_path, method: :get) do %>
+      <div class="row">
+        <%= text_field_tag :term, params[:term] , class: "form-control mr-sm-2" , style:"width: 56% ; margin-left: 20px" %>
+
+        <%= select_tag :option, options_for_select([[t(".all_book"),"books"] ,[t(".author"),"author"] ,[t(".category"),"category"] ], params[:option]),class: "form-control",style: "width: 20%; margin-right: 5px" %>
+
+        <%= submit_tag t(".search") , class: "btn btn-outline-success my-2 my-sm-0" ,style:"width: 20%" %>
+      </div>
+      <% end %>
+
+      <div class="row">
+       <%= render partial: "static_pages/book", collection: @books %>
+         <ul class="pagination">
+          <%= will_paginate @books, previous_label: "&#8592;", next_label: "&#8594;" %>
+        </ul>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

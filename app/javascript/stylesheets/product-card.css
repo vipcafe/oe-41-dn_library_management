@@ -12,8 +12,6 @@
     --drark-back: #363636;
     --oranges-color: #fbb72c;
     --white-color: #fff;
-
-
 };
 
 * {
@@ -56,7 +54,7 @@ a {
     justify-content: center;
     height: 300px;
     width: auto;
-    padding: 50px;
+    padding: 15px;
     background: var(--black-color);
 }
 

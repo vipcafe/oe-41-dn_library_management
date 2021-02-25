@@ -2,11 +2,12 @@ vi:
   base_title: Thư viện sách
   layouts:
     header:
+      library: THƯ VIỆN
       vi: Tiếng Việt
       en: Tiếng Anh
       home: Trang chủ
       books: Sách
-      catagories: Danh Mục
+      categories: Danh Mục
       contacts: Liên hệ
       sign_up: Đăng Ký
       login: Đăng Nhập
@@ -16,11 +17,15 @@ vi:
   borrowing_book:
     index:
       index: Số thứ tự
+
+  borrowing_book:
+    index:
       borrowing_books: Sách Đang Mượn
       name_of_book: Tên sách
       borrowed_date: Ngày mượn
       expiration_date: Ngày hết hạn
       status: Tình trạng
+
     status:
       pending: Chưa nhận
       approved: Đã nhận
@@ -44,3 +49,15 @@ vi:
       last: "CUỐI CÙNG »"
       previous: "‹ TRƯỚC"
       next: "SAU ›"
+
+  static_pages:
+    list_books:
+      search: Tìm kiếm
+      all_book: Tên Sách
+      author: Tác Giả
+      category: Danh Sách
+
+    book:
+      new: Mới
+      borrow: Mượn Sách
+      details: Chi tiết
