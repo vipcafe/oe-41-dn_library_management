@@ -1,0 +1,14 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "footer";
+@import "product-card";
+
+:root {
+  --dark_color: #282d32;
+  --white_color: #fff;
+  --shade_of_gray: #f0f9ff;
+}
