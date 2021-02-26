@@ -1,4 +1,5 @@
 vi:
+  base_title: Thư viện sách
   layouts:
     header:
       vi: Tiếng Việt
@@ -12,11 +13,34 @@ vi:
       search: Tìm kiếm
       borrowing_book: Sách đang mượn
 
-
   borrowing_book:
     index:
+      index: Số thứ tự
       borrowing_books: Sách Đang Mượn
       name_of_book: Tên sách
       borrowed_date: Ngày mượn
       expiration_date: Ngày hết hạn
       status: Tình trạng
+    status:
+      pending: Chưa nhận
+      approved: Đã nhận
+      cancel: Bỏ qua
+      reject: Từ chối
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "Ngày %d tháng %m năm %Y"
+      short: "%d/%m"
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      long: "Ngày %d tháng %m năm %Y"
+      short: "%d/%m"
+
+  views:
+    pagination:
+      first: "« ĐẦU TIÊN"
+      last: "CUỐI CÙNG »"
+      previous: "‹ TRƯỚC"
+      next: "SAU ›"

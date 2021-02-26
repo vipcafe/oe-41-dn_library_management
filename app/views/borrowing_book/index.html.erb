@@ -1,0 +1,28 @@
+<% provide :title, t(".borrowing_books") %>
+<h1 style="text-align: center;"><%= t ".borrowing_books" %></h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="text-align: center;"><%= t ".index" %></th>
+      <th scope="col"><%= t ".name_of_book" %></th>
+      <th scope="col"><%= t ".borrowed_date" %></th>
+      <th scope="col"><%= t ".expiration_date" %></th>
+      <th scope="col"><%= t ".status" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= paginate @borrowing_books, theme: "twitter-bootstrap-3" %>
+
+    <% @borrowing_books.each_with_index do |e, index| %>
+      <tr>
+        <th style="text-align: center;"><%= index + 1 %></th>
+        <th scope="row"><%= e.book.title %></th>
+        <td><%= l e.borrowed_date, format: :long %></td>
+        <td><%= l e.expiration_date, format: :long %></td>
+        <td><%= e.status_i18n %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

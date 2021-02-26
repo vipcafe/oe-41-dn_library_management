@@ -10,3 +10,14 @@
     author_id: id, publish_date: Time.zone.now,
     quantity: 5)
 end
+
+10.times do |n|
+  id = n+1
+  BorrowingBook.create!(borrowed_date: "2020/02/12",
+    expiration_date: "2020/05/12",
+    status: 0,
+    deleted: 0,
+    user_id: id,
+    book_id: id)
+end
+
