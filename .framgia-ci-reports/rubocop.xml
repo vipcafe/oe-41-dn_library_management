@@ -11,7 +11,7 @@
   <file name='app/models/book.rb'/>
   <file name='app/models/book_interaction.rb'/>
   <file name='app/models/borrowing_book.rb'/>
-  <file name='app/models/categories.rb'/>
+  <file name='app/models/category.rb'/>
   <file name='app/models/follow_author.rb'/>
   <file name='app/models/publisher.rb'/>
   <file name='app/models/user.rb'/>

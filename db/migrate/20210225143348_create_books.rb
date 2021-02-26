@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :image
       t.date :publish_date
       t.string :description
-      t.integer :deleted
+      t.integer :deleted, default: 0
       t.integer :quantity
       t.references :category, null: false, foreign_key: true
       t.references :publisher, null: false, foreign_key: true
