@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :current_user
+
   def home
     @books = Book.order_by_title
                  .paginate(page: params[:page],

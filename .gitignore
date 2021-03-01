@@ -151,3 +151,7 @@ build-iPhoneSimulator/
 
 /public/packs
 /public/packs-test
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

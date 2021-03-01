@@ -1,5 +1,14 @@
 vi:
   base_title: Thư viện sách
+  borrowed_book: Bạn đã mượn sách này rồi.
+  over_quantity_to_borrow: Số lượng sách đã mượn đã nhiều hơn 5. Vui lòng trả sách trước khi mượn!
+  error_find_book: Không tìm thấy sách này.
+  request_sent_successfully: Gửi yêu cầu thành công.
+  request_sent_failed: Gửi yêu cầu thất bại.
+  book_out_of_stock: Sách này đã hết trong kho, vui lòng quay lại sau.
+  book_out_of_date: Bạn có sách quá hạn. Vui lòng trả sách trước khi mượn.
+  the_form_contains: Biểu mẫu chứa
+  must_be_after_borrowed_date: phải sau ngày mượn.
   layouts:
     header:
       library: THƯ VIỆN
@@ -20,27 +29,24 @@ vi:
   borrowing_book:
     index:
       index: Số thứ tự
+    status:
+      pending: Chưa nhận
+      approved: Đã nhận
+      canceled: Bỏ qua
+      rejected: Từ chối
 
-  borrowing_book:
+  borrowing_books:
     index:
       borrowing_books: Sách Đang Mượn
       name_of_book: Tên sách
       borrowed_date: Ngày mượn
       expiration_date: Ngày hết hạn
       status: Tình trạng
-
-    status:
-      pending: Chưa nhận
-      approved: Đã nhận
-      cancel: Bỏ qua
-      reject: Từ chối
+    new:
+      borrow: Mượn
+      note: "(Chú ý: Ngày trả không quá 30 ngày kể từ ngày mượn.)"
 
   date:
-    formats:
-      default: "%d/%m/%Y"
-      long: "Ngày %d tháng %m năm %Y"
-      short: "%d/%m"
-  time:
     formats:
       default: "%d/%m/%Y"
       long: "Ngày %d tháng %m năm %Y"
@@ -74,3 +80,12 @@ vi:
       pass: Mật khẩu
       button_login: Đăng nhập
       sign_up: Đăng ký ngay !!!
+      are_you_sure: Bạn có chắc muốn mượn cuốn sách này không?
+
+  activerecord:
+    models:
+      borrowing_book: "Sách Đang Mượn"
+    attributes:
+      borrowing_book:
+        borrowed_date: "Ngày mượn"
+        expiration_date: "Ngày trả"
