@@ -1,7 +1,8 @@
 en:
+  base_title: Book Library
   layouts:
     header:
-      vi: VietNames
+      vi: Vietnames
       en: English
       home: Home
       books: Books
@@ -11,11 +12,29 @@ en:
       login: Login
       search: Search
       borrowing_book: Borrowing book
-
   borrowing_book:
     index:
+      index: Index
       borrowing_books: Borrowing Books
       name_of_book: Name of Book
       borrowed_date: Borrowed Date
       expiration_date: Expiration Date
       status: Status
+    status:
+        pending: Pending
+        approved: Approved
+        cancel: Cancel
+        reject: Reject
+
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      long: "Date %d month %m year %Y"
+      short: "%d/%m"
+
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
