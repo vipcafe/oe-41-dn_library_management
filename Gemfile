@@ -6,10 +6,11 @@ ruby "2.7.0"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.4.1"
+gem "bootstrap-will_paginate", "1.0.0"
+gem "config"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails"
 gem "kaminari"
-
 gem "kaminari-i18n", "~> 0.5.0"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"
@@ -18,6 +19,7 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
+gem "will_paginate", "3.1.7"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

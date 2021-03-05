@@ -3,6 +3,7 @@ class BorrowingBookController < ApplicationController
 
   def index
     @borrowing_books = @current_user.borrowing_books.order_by_created_date
-                                    .page(params[:page]).per(2)
+                                    .page(params[:page])
+                                    .per(Settings.static_page.per_page)
   end
 end

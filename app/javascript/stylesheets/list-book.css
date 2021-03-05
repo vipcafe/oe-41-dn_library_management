@@ -1,0 +1,75 @@
+.list-book {
+  min-height: 600px;
+  padding: 0px 20px 30px 20px;
+
+}
+
+.list-book .box-book {
+  box-shadow: 0px 19px 50px 0px rgb(21,18,18 / 25%);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.list-book .menu-book {
+  position: sticky;
+  z-index: 0;
+  border-radius: 5px;
+  border-style: outset;
+  top: 100px ;
+  height: 500px ;
+  padding: 10px;
+}
+
+.list-book .menu-book .task {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+  height: 50px
+}
+
+.list-book .show-book {
+  padding: 10px;
+  height: auto; ;
+}
+
+/* Pagination */
+.pagination {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination > li {
+  display: inline-block;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  width: 40px;
+  height: 44px;
+  padding: 8px 14px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #b5b7b7;
+  border-color: #b5b7b7;
+}
+
