@@ -13,6 +13,9 @@ vi:
       login: Đăng Nhập
       search: Tìm kiếm
       borrowing_book: Sách đang mượn
+      profile: Thông tin
+      setting: Tùy chỉnh
+      log_out: Thoát
 
   borrowing_book:
     index:
@@ -61,3 +64,13 @@ vi:
       new: Mới
       borrow: Mượn Sách
       details: Chi tiết
+
+  sessions:
+    login:
+      title_login1: THƯ VIỆN
+      title_login2: SÁCH
+      title_form: Đăng nhập
+      user: Tài khoản
+      pass: Mật khẩu
+      button_login: Đăng nhập
+      sign_up: Đăng ký ngay !!!

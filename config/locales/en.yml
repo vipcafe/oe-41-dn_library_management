@@ -13,6 +13,9 @@ en:
       login: Login
       search: Search
       borrowing_book: Borrowing book
+      profile: profile
+      setting: Setting
+      log_out: Logout
 
   borrowing_book:
     index:
@@ -54,3 +57,15 @@ en:
       new: New
       borrow: Borrow
       details: Details
+
+  sessions:
+    login:
+      title_login1: LIBRARY
+      title_login2: BOOK
+      title_form: Login
+      user: Username
+      pass: Password
+      button_login: Login
+      sign_up: Sign up now !!!
+
+

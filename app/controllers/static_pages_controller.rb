@@ -16,15 +16,15 @@ class StaticPagesController < ApplicationController
   def check_params
     type = params[:option]
     value = params[:term]
-    books = Settings.static_page.search_books
-    author = Settings.static_page.search_author
-    category = Settings.static_page.search_category
+    s_books = Settings.static_page.search_books
+    s_author = Settings.static_page.search_author
+    s_category = Settings.static_page.search_category
 
-    return Book.search_by_book_title(value) if type == books
+    return Book.search_by_book_title(value) if type == s_books
 
-    return Book.search_by_author_name(value) if type == author
+    return Book.search_by_author_name(value) if type == s_author
 
-    return Book.search_by_category_name(value) if type == category
+    return Book.search_by_category_name(value) if type == s_category
 
     Book.order_by_title
   end

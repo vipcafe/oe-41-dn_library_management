@@ -10,8 +10,9 @@
 <body>
   <%= render "layouts/header" %>
   <div class="container-fluid">
+    <%= render "layouts/flash_msg" , collection: @flash %>
     <%= yield %>
   </div>
-  <%= render "layouts/contact" %>
+  <%= render "layouts/footer" %>
 </body>
 </html>
