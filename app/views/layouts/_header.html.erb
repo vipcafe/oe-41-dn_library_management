@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="sticky; z-index: 1000; top: 0 ; margin-bottom: 30px">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="sticky; z-index: 1000; top: 0 ; margin-bottom: 30px ;position: fixed; width: 100%">
   <b class="navbar-brand" href="#"><%= t(".library") %></b>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -43,22 +43,38 @@
 </form>
 
 <ul  class="navbar-nav my-2 my-lg-0 " style="margin-left: 30px">
+  <% if logged_in? %>
   <li class="nav-item" style="margin-right: 5px">
     <%= link_to t(".borrowing_book"), borrowing_book_index_path,
     class: "nav-link  btn btn-info" %>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link  btn btn-success" style="width: 100px ; color: white"
-    href="#" tabindex="-1" aria-disabled="true"><%= t("layouts.header.login") %> </a>
-  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle btn btn-success" href="#" id="navbarDropdown"
+    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-  <li class="nav-item">
-    <a class="nav-link btn btn-danger "
-    style=" margin-left: 5px; width: 100px; color: white"
-    href="#" tabindex="-1" aria-disabled="true"><%= t(".sign_up") %></a>
-  </li>
+    <%= @current_user.name  %>
+  </a>
+  <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#"><%= t(".profile") %></a>
+    <a class="dropdown-item" href="#"><%= t(".setting") %></a>
+    <div class="dropdown-divider"></div>
+    <%= link_to t(".log_out"), sessions_logout_path, method: :delete, class:"dropdown-item"%></a>
+
+  </div>
+</li>
+
+<% else %>
+<li class="nav-item">
+  <%= link_to t(".login") , sessions_login_path , class: "nav-link btn btn-success", style: "width: 100px ; color: white" %>
+</li>
+
+<li class="nav-item">
+  <%= link_to t(".sign_up") , sessions_sign_up_path , class: "nav-link btn btn-danger", style: "margin-left: 5px; width: 100px; color: white" %>
+</a>
+</li>
+<% end %>
+
 </ul>
-
 </div>
 </nav>
