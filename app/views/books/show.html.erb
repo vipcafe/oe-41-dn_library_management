@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-5" style="max-height: 500px">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img src=<%= @book.image %> /></div>
+          </div>
+        </div>
+
+        <div class="details col-md-7">
+          <h3 class="product-title"><%= @book.title %></h3>
+          <div class="rating">
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <span class="review-no">41 reviews</span>
+          </div>
+          <p class="product-description" style="min-height: 150px">
+            <%= @book.description %>
+          </p>
+          <h5 class="price"><%= t(".author") %> : <span><%= @book.author_name %></span></h5>
+          <h5 class="price"><%= t(".category") %> : <span><%= @book.category_name %></span></h5>
+          <div class="action">
+
+           <% if !@current_user.nil? %>
+           <%= link_to t(".borrow"), new_user_borrowing_book_path(@current_user.id, id: @book.id),
+           class: "add-to-cart btn btn-default" %>
+           <% else %>
+           <%= link_to t(".borrow"), sessions_login_path,
+           class: "add-to-cart btn btn-default" %>
+           <% end %>
+
+           <a class="like btn btn-outline-danger" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+              <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
+            </svg>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -8,6 +8,7 @@
 @import "product-card";
 @import "list-book";
 @import "login";
+@import "show_product";
 
 :root {
   --dark_color: #282d32;
@@ -15,3 +16,6 @@
   --shade_of_gray: #f0f9ff;
 }
 
+body {
+  font-family: 'open sans';
+  overflow-x: hidden; }

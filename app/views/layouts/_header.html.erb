@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="sticky; z-index: 1000; top: 0 ; margin-bottom: 30px ;position: fixed; width: 100%">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="sticky; z-index: 1000; top: 0 ;position: fixed; width: 100%">
+
   <b class="navbar-brand" href="#"><%= t(".library") %></b>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -60,17 +62,16 @@
     <a class="dropdown-item" href="#"><%= t(".setting") %></a>
     <div class="dropdown-divider"></div>
     <%= link_to t(".log_out"), sessions_logout_path, method: :delete, class:"dropdown-item"%></a>
-
   </div>
 </li>
 
 <% else %>
 <li class="nav-item">
-  <%= link_to t(".login") , sessions_login_path , class: "nav-link btn btn-success", style: "width: 100px ; color: white" %>
+  <%= link_to t(".login") , sessions_login_path , class: "nav-link btn btn-success", style: "width: 110px ; color: white" %>
 </li>
 
 <li class="nav-item">
-  <%= link_to t(".sign_up") , sessions_sign_up_path , class: "nav-link btn btn-danger", style: "margin-left: 5px; width: 100px; color: white" %>
+  <%= link_to t(".sign_up") , sessions_sign_up_path , class: "nav-link btn btn-danger", style: "margin-left: 5px; width: 110px; color: white" %>
 </a>
 </li>
 <% end %>

@@ -83,8 +83,6 @@ en:
       pass: Password
       button_login: Login
       sign_up: Sign up now !!!
-
-
       are_you_sure: Are you sure you want to borrow this book?
 
   activerecord:
@@ -94,3 +92,9 @@ en:
       borrowing_book:
         borrowed_date: "Borrowed Date"
         expiration_date: "Expiration Date"
+
+  books:
+    show:
+      author: Author
+      category: category
+      borrow : Borrow

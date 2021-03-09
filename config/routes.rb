@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     resources :books
     root to: "static_pages#home"
     get "static_pages/list_books"
-
     get "sessions/login"
     post "sessions/login" ,to: "sessions#create"
     delete "sessions/logout", to: "sessions#destroy"
@@ -13,5 +12,8 @@ Rails.application.routes.draw do
     resources :users do
         resources :borrowing_books
     end
+
+    namespace :admin do
+        root to:
   end
 end

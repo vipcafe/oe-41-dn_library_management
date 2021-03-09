@@ -1,10 +1,9 @@
 <%= render "static_pages/slide" %>
 
 <div class="row">
-  <%= render partial: "static_pages/book", collection: @books %>
-
+  <%= render partial: "static_pages/book", collection: @abc %>
   <ul class="pagination">
-   <%= will_paginate @books, previous_label: "&#8592;", next_label: "&#8594;" %>
+   <%= will_paginate @abc, previous_label: "&#8592;", next_label: "&#8594;" %>
   </ul>
 </div>
 

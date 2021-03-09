@@ -2,23 +2,28 @@ class StaticPagesController < ApplicationController
   before_action :current_user
 
   def home
-    @books = Book.order_by_title
+    @abc = Book.order_by_title
                  .paginate(page: params[:page],
                   per_page: Settings.static_page.per_page)
   end
 
   def list_books
+    @categories = Category.all
     @books = check_params.includes(:author, :category)
                          .paginate(page: params[:page],
                           per_page: Settings.static_page.per_page)
+    if @books.empty?
+      flash[:info] = "Không tìm thấy sách #{params[:term]}"
+
+    end
   end
 
   private
 
   def check_params
-    type = params[:option]
     value = params[:term]
-    s_books = Settings.static_page.search_books
+    type = params[:option]
+    s_books = Settings.static_page.search_book
     s_author = Settings.static_page.search_author
     s_category = Settings.static_page.search_category
 

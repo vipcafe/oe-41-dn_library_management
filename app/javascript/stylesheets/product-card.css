@@ -21,6 +21,25 @@
     padding: 0;
 }
 
+.text-h5 {
+    min-height: 48px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+.text-h6 {
+    min-height: 66px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -64,7 +83,7 @@ a {
 }
 
 .product-details {
-    padding: 30px;
+    padding: 17px;
 }
 
 .product-catagory {

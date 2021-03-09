@@ -2,12 +2,12 @@
   <div class="product-card">
     <div class="badge"><%= t(".new") %></div>
     <div class="product-tumb">
-      <img src="https://www.dtv-ebook.com/images/files_2/2020/ban-that-ba-dao!-jen-sincero.jpg" alt="">
+      <img src=<%= book.image %> alt="">
     </div>
     <div class="product-details">
       <span class="product-catagory"><%= book.author_name %> | <%= book.category_name %></span>
-      <h5><a href=""><%= book.title %></a></h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+      <h5 class="text-h5"><%= link_to book.title, book_path(book.id) %></a></h5>
+      <p class="text-h6"><%= book.description %></p>
       <div class="product-bottom-details row">
         <% if !@current_user.nil? %>
         <%= link_to t(".borrow"), new_user_borrowing_book_path(@current_user.id, id: book.id),
@@ -16,8 +16,7 @@
          <%= link_to t(".borrow"), sessions_login_path,
          class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
          <% end %>
-        <button type="button" class="btn btn-info"
-        style="width: 100%"><%= t(".details") %></button>
+        <%= link_to t(".details"),book_path(book.id), class: "btn btn-info" ,style: "width: 100% ; margin-bottom: 5px" %>
       </div>
     </div>
   </div>

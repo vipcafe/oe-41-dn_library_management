@@ -89,3 +89,9 @@ vi:
       borrowing_book:
         borrowed_date: "Ngày mượn"
         expiration_date: "Ngày trả"
+
+  books:
+    show:
+      author: Tác giả
+      category: Thể loại
+      borrow : Mượn sách
