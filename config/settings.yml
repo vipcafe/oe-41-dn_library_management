@@ -3,3 +3,5 @@ static_page:
   search_book : books
   search_author: author
   search_category: category
+borrowing_book_controller:
+  per_page: 10

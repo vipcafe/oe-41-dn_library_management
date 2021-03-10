@@ -45,7 +45,7 @@
 <ul  class="navbar-nav my-2 my-lg-0 " style="margin-left: 30px">
   <% if logged_in? %>
   <li class="nav-item" style="margin-right: 5px">
-    <%= link_to t(".borrowing_book"), borrowing_book_index_path,
+    <%= link_to t(".borrowing_book"), user_borrowing_books_path(@current_user.id),
     class: "nav-link  btn btn-info" %>
   </li>
 

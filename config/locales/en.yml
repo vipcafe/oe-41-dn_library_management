@@ -1,5 +1,14 @@
 en:
   base_title: Book Library
+  borrowed_book: You borrowed this book.
+  over_quantity_to_borrow: The number of borrowed books is more than 5. Please return your books before you buy!
+  error_find_book: Not found the book.
+  request_sent_successfully: Request sent successfully.
+  request_sent_failed: Request Sent Successfully
+  book_out_of_stock: This book is out of stock, please come back later.
+  book_out_of_date: Book out of date. Please return the book before re-borrowing.
+  the_form_contains: The form contains
+  must_be_after_borrowed_date: must be after borrowed date.
   layouts:
     header:
       Library: LIBRARY
@@ -19,18 +28,25 @@ en:
 
   borrowing_book:
     index:
+      index: Số thứ tự
+    status:
+        pending: Pending
+        approved: Approved
+        canceled: Canceled
+        rejected: Rejected
+
+  borrowing_books:
+    index:
       index: Index
       borrowing_books: Borrowing Books
       name_of_book: Name of Book
       borrowed_date: Borrowed Date
       expiration_date: Expiration Date
       status: Status
+    new:
+      borrow: Borrow
+      note: Expiration Date not more than 30 days from the Borrowed Date.
 
-    status:
-        pending: Pending
-        approved: Approved
-        cancel: Cancel
-        reject: Reject
 
     date:
       formats:
@@ -69,3 +85,12 @@ en:
       sign_up: Sign up now !!!
 
 
+      are_you_sure: Are you sure you want to borrow this book?
+
+  activerecord:
+    models:
+      borrowing_book: "Borrowing Book"
+    attributes:
+      borrowing_book:
+        borrowed_date: "Borrowed Date"
+        expiration_date: "Expiration Date"

@@ -16,4 +16,8 @@ class Book < ApplicationRecord
   scope :search_by_category_name,
         ->(term){joins(:category).where("categories.name LIKE ?", "%#{term}%")}
   scope :order_by_title, ->{(order :title).includes(:author, :category)}
+
+  def update_quantity updated_quantity
+    update!(quantity: updated_quantity)
+  end
 end

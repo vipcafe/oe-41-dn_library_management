@@ -13,15 +13,17 @@
   </thead>
 
   <tbody>
-    <%= paginate @borrowing_books, theme: "twitter-bootstrap-3" %>
+    <ul class="pagination">
+      <%= will_paginate @borrowing_books, previous_label: "&#8592;", next_label: "&#8594;" %>
+    </ul>
 
     <% @borrowing_books.each_with_index do |e, index| %>
       <tr>
-        <th style="text-align: center;"><%= index + 1 %></th>
-        <th scope="row"><%= e.book.title %></th>
-        <td><%= l e.borrowed_date, format: :long %></td>
-        <td><%= l e.expiration_date, format: :long %></td>
-        <td><%= e.status_i18n %></td>
+          <th style="text-align: center;"><%= index + 1 %></th>
+          <th scope="row"><%= e.book_title %></th>
+          <td><%= l e.borrowed_date, format: :long %></td>
+          <td><%= l e.expiration_date, format: :long %></td>
+          <td><%= e.status_i18n %></td>
       </tr>
     <% end %>
   </tbody>
